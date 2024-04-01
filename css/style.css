@@ -1,0 +1,561 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Dela Gothic One', cursive;
+
+}
+
+.zoom:hover{
+    /* tranformamos el elemento al pasar el mouse por encima con scale(1.2). */
+    transition: 0.3s; /*Time*/
+    transform : scale(2);
+    -moz-transform : scale(2); /* Firefox */
+    -webkit-transform : scale(1.2); /* Chrome - Safari */
+    -o-transform : scale(2); /* Opera */
+}
+
+
+.floatRight{
+    display: flex;
+    float: right;
+}
+
+.sizeNav{
+    font-size: 1.2rem;
+}
+
+.sizeNavLogo{
+    font-size: 2rem;
+}
+
+.zoom:hover{
+    font-size: 4rem;
+}
+
+.grey{
+    background: grey;
+}
+
+.black{
+    background: black;
+}
+
+
+
+.movDerecha{
+    animation: movDerecha 2s;
+}
+
+.movIzquierda{
+    animation: movIzquierda 2s;
+}
+
+.movBotton{
+    animation: movBotton 3s;
+}
+
+.iconGithub{
+    color: black;
+    font-size: 3rem;
+}
+
+
+.posAbsoluteProyect{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,0.9);
+    color:white;
+    opacity: 0 ;
+    border: 1px solid #ededed;  
+}
+
+.posAbsoluteProyect:hover{
+    animation: movBotton 1s ease-out;
+    opacity: 1;
+}
+
+.postRelativeCard, .postRelativeProyect{
+    position: relative;
+    overflow: hidden;
+}
+
+.postAbsoluteCard{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 10;
+    
+
+}
+@keyframes movBotton{
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0%);
+        
+
+    }
+}
+
+@keyframes movTop{
+    0% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0%);
+        
+
+    }
+}
+
+
+@keyframes movIzquierda{
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+@keyframes movDerecha{
+    0% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+.parallax{
+    width: 100%;
+    height: 100%;
+    /*background-image: url("https://res.cloudinary.com/jose-martinez-images/image/upload/v1628449406/Jose-Martinez-Gutierrez/parallax_be7a0m.jpg");*/
+    /*background: url('../cv/fondo/parallax.jpg');*/
+    background-color: #ededed;
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.works__proyect-content{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:white;
+    background: rgba(0,0,0,0.9);
+    transition: all ease-out 1s;
+    transform: translateY(100%);
+  
+    
+}
+
+.works__proyect-box {
+    position:relative; 
+    overflow: hidden;
+}
+
+.works__proyect-box:hover .works__proyect-content{
+    transform: translateY(0%);
+}
+
+.works__proyect-box:hover .works__proyect-image{
+    transform: scale(1.2);
+}
+
+.works__proyect-image{
+    transition: all 1s;
+}
+
+
+/*B E M*/
+
+/*Modal Add*/
+
+.modalAdd__header{
+    background:#FF5733;
+}
+
+.modalAdd__title{
+    width: 100%;
+    text-align: center;
+}
+
+.modalAdd__item{
+    margin: 20px 0;
+}
+
+.modalAdd__label{
+    margin: 5px 0;
+}
+
+/* sidebar */
+.sidebar{
+    height: 100vh;
+}
+
+.sidebar__box-img{
+    width: 200px;
+    height: 300px;
+}
+
+.sidebar__img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.sidebar__log{
+    transition: 6000s ease;
+}
+
+.sidebar__log:hover > .sidebar__log-list {
+    display: block;
+    transition: 6000s ease;
+}
+
+.sidebar__log-list{
+    display: none;
+    margin: auto;
+}
+
+.sidebar__item{
+    list-style: none;
+    text-decoration: none;
+    margin: auto;
+}
+
+.sidebar__log-item:hover{
+    background: black;
+}
+.sidebar__ref{
+    color:black
+}
+
+.sidebar__ref:hover{
+    color: white;
+}
+
+.sidebar__title{
+    color:white;
+}
+
+.colorScroll::-webkit-scrollbar-thumb{
+    background: red;
+}
+/*------------------------*/
+.box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.box__title--card{
+    color: rgb(80, 37, 160);
+}
+
+.box__card{
+    width: 20%;
+    height: auto;
+    border: 1px solid  black;
+    border-radius: 25px;
+}
+
+.box__image-box{
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    margin:auto;
+}
+
+.box__image{
+    width: 100%;
+    height: 150px
+}
+
+.box__title{
+    text-align: center;
+}
+.box__buttons-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box__functions-b{
+    margin: 4px;
+}
+
+/*Index ejs*/
+
+/* Skills */
+.skills{
+    background-color: #ededed;
+
+
+}
+.skills__skill{
+    background:rgba(230, 165, 25, 0.9);
+}
+
+/* Works */
+.works__title{
+    font-weight: bold;
+    font-size: 2.1rem;
+    background: rgba(104, 140, 218, 0.9);
+    border-radius: 0% 100% 12% 88% / 69% 45% 55% 31% ;
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.works__proyect-box{
+    margin: auto;
+}
+
+/*cover page*/
+
+.coverPage {
+    position: relative;
+}
+
+.coverPage__row {
+    height: 62rem;
+    background: url('../cv/fondo/test2.jpg');
+}
+
+/*login */
+
+.box__login {
+    margin:auto;
+    background: #ededed;
+    border-radius: 20px;
+    border: 1px solid rgb(32, 28, 28)
+}
+.box__title-login{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    background: rgba(104, 140, 218, 0.9);
+    border-radius: 0% 100% 12% 88% / 69% 45% 55% 31% ;
+}
+
+.box__label-login{
+    margin-bottom: 15px;
+}
+
+/*Dashboard*/
+
+.header{
+    display: fixed;
+    background-color: #1d1d21;
+    padding: 20px;
+}
+
+.header__title{
+    text-transform: uppercase;
+    color: #cbc8e0;
+    font-size: 25px;
+}
+
+.header__sub-title{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #FF5733 
+}
+
+.header__logout{
+    float: right;
+    margin-top: -30px;
+
+}
+
+.header__btn-logout{
+    padding: 10px;
+    background-color: #096a9b  ;
+    color:#cbc8e0;
+    text-decoration: none;
+   
+}
+
+.header__btn-logout:hover{
+    background-color: #096a9b;
+    color:#1d1d21;
+}
+
+.header__check-icon{
+    color:#ccc;
+    position: absolute;
+    font-size: 30px;
+    padding: 10px;
+    left: 320px;
+    cursor:pointer;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+.header__check-icon:hover{
+    color: #096a9b;
+}
+
+
+.header__check-cli{
+    display: none;
+}
+
+.header__check-cli:checked ~ .sidebar{
+    left: -250px;
+}
+
+.header__check-cli:checked ~  .sidebar .sidebar__link-span{
+    display: none;
+}
+
+
+.header__check-cli:checked ~ .sidebar .sidebar__links{
+    margin-left: 250px;
+    font-size: 20px;
+    width: 60px;
+    background-color: black;
+    position: fixed;
+}
+
+.header__check-cli:checked ~ .main{
+    margin-left: 0;
+}
+
+.sidebar{
+    position: absolute;
+    background-color: black;
+    width: 250px;
+    left: 0;
+    height: 100vh;
+    transition-property: left;
+    transition: 0.5s;
+}
+
+.sidebar__container{
+    text-align: center;
+}
+
+.sidebar__img{
+    border-radius: 50%;
+    padding: 30px;
+}
+.sidebar__name{
+    color: #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar__links{
+    width: 100%;
+    
+}
+
+.sidebar__link{
+    display: block;
+    padding-left: 10px;
+    text-decoration: none;
+    color: #ccc;
+    padding: 20px;
+}
+
+.sidebar__link:hover{
+    background-color:  #186c95 ;
+    color:#1d1d21;
+}
+.sidebar__icon{
+    padding-right: 10px;
+}
+
+.main{
+    margin-left: 250px;
+    transition-property: margin-lef;
+    transition: 0.5s;
+    height: 100vh;
+    background-color: #ededed;
+}
+
+
+
+
+
+/* Estilo básico para la imagen con cursor de zoom */
+.img-zoom {
+    cursor: zoom-in;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave para el zoom */
+}
+
+/* Cuando se pasa el cursor sobre la imagen */
+.img-zoom:hover {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen */
+}
+
+/* Estilos para el modal */
+.modal-content {
+    background-color: #f8f9fa; /* Cambia el color de fondo del modal */
+    border-radius: 10px; /* Añade esquinas redondeadas al modal */
+    border: none; /* Elimina el borde del modal */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Añade sombra al modal */
+  }
+
+  .modal-header {
+    background-color: #ededed; /* Cambia el color de fondo del encabezado */
+    color: #fff; /* Cambia el color del texto del encabezado */
+    border: none; /* Elimina el borde del encabezado */
+    border-radius: 10px 10px 0 0; /* Añade esquinas redondeadas al encabezado */
+    padding: 15px 20px; /* Añade relleno al encabezado */
+  }
+
+  .modal-body {
+    padding: 20px; /* Añade relleno al cuerpo del modal */
+    position: relative; /* Añade posición relativa al cuerpo del modal */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+  }
+
+  .modal-title {
+    text-align: center; /* Centra el título del modal */
+    font-family: Arial, sans-serif; /* Cambia la fuente del título */
+    font-size: 24px; /* Cambia el tamaño del texto del título */
+    font-weight: bold; /* Añade negrita al título */
+    margin-bottom: 20px; /* Añade espacio en la parte inferior del título */
+  }
+
+  .modal-product-title {
+    text-align: center; /* Centra el título del producto en el cuerpo del modal */
+    font-size: 20px; /* Cambia el tamaño del texto del título del producto */
+    font-weight: bold; /* Añade negrita al título del producto */
+    margin-bottom: 20px; /* Añade espacio en la parte inferior del título del producto */
+  }
+
+  .close {
+    color: #fff; /* Cambia el color del botón de cierre */
+    font-size: 30px; /* Cambia el tamaño del texto del botón de cierre */
+    position: absolute; /* Ajusta la posición del botón de cierre */
+    top: 10px; /* Ajusta la posición vertical del botón de cierre */
+    right: 20px; /* Ajusta la posición horizontal del botón de cierre */
+    opacity: 1; /* Establece la opacidad del botón de cierre */
+  }
+
+  .close:hover {
+    color: #fff; /* Cambia el color del botón de cierre al pasar el ratón por encima */
+    opacity: 0.8; /* Reduce la opacidad del botón de cierre al pasar el ratón por encima */
+  }
